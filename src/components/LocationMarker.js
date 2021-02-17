@@ -1,12 +1,14 @@
+import {Fragment}  from 'react';
 import { Icon } from '@iconify/react'
 import wild from '@iconify/icons-mdi/fire-alert'//wildires
 
 
-const LocationMarker = ({ name,lat, lng, onClick }) => {
-    // console.log(name);
+const LocationMarker = ({ name,lat,lng,onClick }) => {
+    console.log(name);
     return (
         <div className="location-marker" onClick={onClick}>
-           <Icon icon={wild} className="location-icon" />
+        {name==="Wildfires" ? <Icon icon={wild} className="location-icon" />:<Fragment/> }
+           
 
            {/* {
     {name}==="Wildfires"?<Icon icon={wild} className="location-icon" />:<Fragment/>

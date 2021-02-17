@@ -9,12 +9,11 @@ const Map = ({ eventData, center, zoom }) => {
     const [locationInfo, setLocationInfo] = useState(null)
 
     const markers = eventData.map((ev, index) => {
-        // 
-        if(ev.categories[0].title === "Wildfires") {
+        if(ev.geometries[0].coordinates[1]!==undefined && ev.geometries[0].coordinates[0]!==undefined){
             return <LocationMarker name={ev.categories[0].title} key={index} lat={ev.geometries[0].coordinates[1]} lng={ev.geometries[0].coordinates[0]} onClick={() => setLocationInfo({ id: ev.id, title: ev.title })} />
         }
         return null;
-    })
+    });
 
     return (
         <div className="map">
