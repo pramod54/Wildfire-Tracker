@@ -1,10 +1,10 @@
 import { Icon } from '@iconify/react'
-import locationIcon from '@iconify/icons-mdi/fire-alert'
+//import locationIcon from '@iconify/icons-mdi/fire-alert'
 
 const Header = () => {
     return (
         <header className="header">
-            <h1><Icon icon={locationIcon} /> Nature Calamity (Powered By NASA)</h1>
+            <h1>Nature Calamity (Powered By NASA)</h1>
         </header>
     )
 }
